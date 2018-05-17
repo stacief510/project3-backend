@@ -39,7 +39,7 @@ db.User.remove({}, function(err, removedUsers){
         events.forEach(event => {
             event.user_id = createdUsers[0]._id;
         })
-        console.log('You created users', createdUsers);
+
 
     db.Event.remove({}, function(err, removedEvents) {
         db.Event.create(events, function (err, createdEvents) {
@@ -47,6 +47,7 @@ db.User.remove({}, function(err, removedUsers){
             process.exit();
         });
     });
+            console.log('You created users', createdUsers);
 
     });
 });
